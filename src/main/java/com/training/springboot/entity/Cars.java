@@ -1,10 +1,9 @@
-package com.nomadsoft.aracihaletur.entity;
+package com.training.springboot.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import org.springframework.data.mongodb.core.mapping.Document;
-import com.nomadsoft.aracihaletur.utility.VitesEnum;
-import com.nomadsoft.aracihaletur.utility.YakitEnum;
+
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -31,12 +30,6 @@ public class Cars {
 	@Getter
 	@Setter
 	private double km;
-	@Getter
-	@Setter
-	private Enum<YakitEnum> yakit;
-	@Getter
-	@Setter
-	private Enum<VitesEnum> vites;
 	@Getter
 	@Setter
 	private int motorHacmi;

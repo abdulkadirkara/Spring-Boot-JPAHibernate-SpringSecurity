@@ -1,4 +1,4 @@
-package com.nomadsoft.aracihaletur.service;
+package com.training.springboot.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,9 +12,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 import org.springframework.stereotype.Service;
-import com.nomadsoft.aracihaletur.entity.Examples;
 
-import com.nomadsoft.aracihaletur.repository.ExampleRepository;
+import com.training.springboot.entity.Examples;
+import com.training.springboot.repository.ExampleRepository;
 
 
 @Service

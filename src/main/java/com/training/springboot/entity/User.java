@@ -1,4 +1,4 @@
-package com.nomadsoft.aracihaletur.entity;
+package com.training.springboot.entity;
 
 import javax.persistence.Entity;
 

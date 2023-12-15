@@ -1,4 +1,4 @@
-package com.nomadsoft.aracihaletur.entity;
+package com.training.springboot.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;

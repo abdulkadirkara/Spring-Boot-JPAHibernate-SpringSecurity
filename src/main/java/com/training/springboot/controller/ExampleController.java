@@ -1,4 +1,4 @@
-package com.nomadsoft.aracihaletur.controller;
+package com.training.springboot.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,8 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
-import com.nomadsoft.aracihaletur.entity.Examples;
-import com.nomadsoft.aracihaletur.service.ExampleService;
+
+import com.training.springboot.entity.Examples;
+import com.training.springboot.service.ExampleService;
 
 @RestController
 @RequestMapping("/api")

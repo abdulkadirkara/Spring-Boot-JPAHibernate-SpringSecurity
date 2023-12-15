@@ -1,4 +1,4 @@
-package com.nomadsoft.aracihaletur.repository;
+package com.training.springboot.repository;
 
 
 
@@ -8,7 +8,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.nomadsoft.aracihaletur.entity.Examples;
+import com.training.springboot.entity.Examples;
 
 
 
