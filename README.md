@@ -1,1 +1,1 @@
-# Spring-Boot-mongoDB-SpringSecurity
+# Spring-Boot-JPA-Hibernate-SpringSecurity
