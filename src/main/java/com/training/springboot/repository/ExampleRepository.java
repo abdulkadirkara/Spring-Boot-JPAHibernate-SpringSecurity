@@ -1,20 +1,14 @@
 package com.training.springboot.repository;
 
 
-
-import java.util.Optional;
-
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.training.springboot.entity.Examples;
 
 
+@Repository
+public interface ExampleRepository extends JpaRepository<Examples, Long> {
 
-@EnableMongoRepositories
-public interface ExampleRepository extends MongoRepository<Examples, ObjectId> {
-
-	
 	
 }

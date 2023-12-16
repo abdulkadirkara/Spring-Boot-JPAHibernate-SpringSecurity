@@ -3,7 +3,6 @@ package com.training.springboot.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -26,19 +25,19 @@ public class ExampleController<T> {
 
 	@Autowired
 	ExampleService exampleService;
-
+	
 	@PostMapping("/save")
 	public ResponseEntity<Examples> saveExample(@RequestBody Examples example) {
 		// Cars savedCars = (Cars) oneService.save(cars);
 		try {
-			Examples savedExample = exampleService.insert(example);
+			Examples savedExample = exampleService.save(example);
 			return new ResponseEntity<Examples>(savedExample, HttpStatus.CREATED);
 		} catch (Exception e) {
 			throw new HttpClientErrorException((HttpStatusCode) e);
 		}
 
 	}
-
+	
 	@GetMapping("/findAll")
 	public ResponseEntity<List<Examples>> FindAll() {
 		// Cars savedCars = (Cars) oneService.save(cars);
@@ -46,14 +45,14 @@ public class ExampleController<T> {
 	}
 
 	@GetMapping("/findById/{id}")
-	public ResponseEntity<Optional<Examples>> FindById(@PathVariable ObjectId id) {
+	public ResponseEntity<Optional<Examples>> FindById(@PathVariable Long id) {
 
 		Optional<Examples> example = exampleService.findById(id);
 		return new ResponseEntity<Optional<Examples>>(example, HttpStatus.OK);
 	}
 
 	@DeleteMapping("/deleteById/{id}")
-	public ResponseEntity<HttpStatus> DeleteById(@PathVariable ObjectId id) {
+	public ResponseEntity<HttpStatus> DeleteById(@PathVariable Long id) {
 		try {
 			exampleService.deleteById(id);
 			boolean ishave = exampleService.existsById(id);

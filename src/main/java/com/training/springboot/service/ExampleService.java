@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
@@ -24,13 +24,55 @@ public class ExampleService implements ExampleRepository{
 	ExampleRepository exampleRepository;
 
 	@Override
-	public <S extends Examples> S insert(S entity) {
+	public void flush() {
 		// TODO Auto-generated method stub
-		return exampleRepository.insert(entity);
+		
 	}
 
 	@Override
-	public <S extends Examples> List<S> insert(Iterable<S> entities) {
+	public <S extends Examples> S saveAndFlush(S entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <S extends Examples> List<S> saveAllAndFlush(Iterable<S> entities) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAllInBatch(Iterable<Examples> entities) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAllByIdInBatch(Iterable<Long> ids) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAllInBatch() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Examples getOne(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Examples getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Examples getReferenceById(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -56,34 +98,31 @@ public class ExampleService implements ExampleRepository{
 	@Override
 	public List<Examples> findAll() {
 		// TODO Auto-generated method stub
-		return exampleRepository.findAll();
+		return null;
 	}
 
 	@Override
-	public List<Examples> findAllById(Iterable<ObjectId> ids) {
+	public List<Examples> findAllById(Iterable<Long> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public <S extends Examples> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return exampleRepository.save(entity);
 	}
 
 	@Override
-	public Optional<Examples> findById(ObjectId id) {
+	public Optional<Examples> findById(Long id) {
 		// TODO Auto-generated method stub
-		return exampleRepository.findById(id);
+		return Optional.empty();
 	}
 
 	@Override
-	public boolean existsById(ObjectId id) {
-		boolean var = exampleRepository.existsById(id);
-		if(var)
-			return true;
-		else
-			return false;
+	public boolean existsById(Long id) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
@@ -93,11 +132,10 @@ public class ExampleService implements ExampleRepository{
 	}
 
 	@Override
-	public void deleteById(ObjectId id) {
+	public void deleteById(Long id) {
 		// TODO Auto-generated method stub
-		exampleRepository.deleteById(id);
+		
 	}
-	
 
 	@Override
 	public void delete(Examples entity) {
@@ -106,7 +144,7 @@ public class ExampleService implements ExampleRepository{
 	}
 
 	@Override
-	public void deleteAllById(Iterable<? extends ObjectId> ids) {
+	public void deleteAllById(Iterable<? extends Long> ids) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -164,8 +202,5 @@ public class ExampleService implements ExampleRepository{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
-
 
 } 

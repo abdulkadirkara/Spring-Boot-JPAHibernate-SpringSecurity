@@ -3,15 +3,26 @@ package com.training.springboot.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.*;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @Entity
-@Document(collection = "Examples")
-public class Examples {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Examples{
 	
-		
+	  @Id
+	  @GeneratedValue(strategy = GenerationType.IDENTITY)
+	  private Long id;
 		private String name;
 
 		private Date ExampleDate;
